@@ -1,6 +1,7 @@
 use std::io::{self, Write};
 use std::process::{Command};
 
+/// Represents all supported file operations.
 enum FileOperation {
     List(String),                     // Directory path
     Display(String),                  // File path
