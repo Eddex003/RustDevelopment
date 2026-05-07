@@ -10,3 +10,5 @@ A **global CPU cap of 100%** is enforced via a CPU “reservation” model. The 
 ```bash
 cargo build --release
 cargo run --release
+dawd
+## RUN
