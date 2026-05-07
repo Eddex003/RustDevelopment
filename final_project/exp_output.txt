@@ -1,0 +1,71 @@
+== Experiment A (Balanced) — FIFO simulation ==
+1000 tasks, 70% IO / 30% CPU, 8 workers, cap 100%
+arrivals: base 20ms, burst_prob 0.00, burst_size 1, burst_gap 0ms, post_burst 0ms
+durations(ms): IO [180..220], CPU [180..260]
+
+— results —
+total runtime           : 42947 ms
+makespan                : 42945 ms
+tasks completed         : 1000 (IO=700, CPU=300)
+avg wait time           : 11070.32 ms
+avg turnaround time     : 11277.04 ms
+max wait time           : 22639 ms
+avg CPU usage           : 87.23 %
+avg workers active      : 4.82 / 8
+monitor samples         : 4197
+monitor csv             : monitor_expA_fifo.csv
+
+== Experiment A (Balanced) — Optimized simulation ==
+1000 tasks, 70% IO / 30% CPU, 8 workers, cap 100%
+arrivals: base 20ms, burst_prob 0.00, burst_size 1, burst_gap 0ms, post_burst 0ms
+durations(ms): IO [180..220], CPU [180..260]
+
+— results —
+total runtime           : 40647 ms
+makespan                : 40646 ms
+tasks completed         : 1000 (IO=700, CPU=300)
+avg wait time           : 12387.47 ms
+avg wait (IO only)      : 15006.10 ms
+avg wait (CPU only)     : 6277.32 ms
+avg turnaround time     : 12594.18 ms
+max wait time           : 21648 ms (task #581)
+avg CPU usage           : 92.09 %
+avg workers active      : 5.08 / 8
+monitor samples         : 3961
+monitor csv             : monitor_expA_opt.csv
+
+== Experiment B (Stressed) — FIFO simulation ==
+1000 tasks, 20% IO / 80% CPU, 8 workers, cap 100%
+arrivals: base 20ms, burst_prob 0.15, burst_size 35, burst_gap 0ms, post_burst 20ms
+durations(ms): IO [100..220], CPU [250..900]
+
+— results —
+total runtime           : 228005 ms
+makespan                : 228003 ms
+tasks completed         : 1000 (IO=200, CPU=800)
+avg wait time           : 114653.11 ms
+avg turnaround time     : 115139.73 ms
+max wait time           : 225216 ms
+avg CPU usage           : 71.25 %
+avg workers active      : 2.13 / 8
+monitor samples         : 22207
+monitor csv             : monitor_expB_fifo.csv
+
+== Experiment B (Stressed) — Optimized simulation ==
+1000 tasks, 20% IO / 80% CPU, 8 workers, cap 100%
+arrivals: base 20ms, burst_prob 0.15, burst_size 35, burst_gap 0ms, post_burst 20ms
+durations(ms): IO [100..220], CPU [250..900]
+
+— results —
+total runtime           : 227981 ms
+makespan                : 227980 ms
+tasks completed         : 1000 (IO=200, CPU=800)
+avg wait time           : 91898.07 ms
+avg wait (IO only)      : 4604.27 ms
+avg wait (CPU only)     : 113721.52 ms
+avg turnaround time     : 92384.69 ms
+max wait time           : 225198 ms (task #999)
+avg CPU usage           : 71.25 %
+avg workers active      : 2.13 / 8
+monitor samples         : 22227
+monitor csv             : monitor_expB_opt.csv
