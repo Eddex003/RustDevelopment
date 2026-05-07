@@ -21,3 +21,10 @@ Microsoft Copilot
 cargo build --release
 cargo run --release
 ```
+## Run Specific Test
+```bash
+cargo run --release -- expA fifo
+cargo run --release -- expA opt
+cargo run --release -- expB fifo
+cargo run --release -- expB opt
+```
