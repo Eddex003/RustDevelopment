@@ -12,17 +12,14 @@ Using additional external concurrency frameworks or advanced scheduling structur
 ## Tool Use Disclosure
 Microsoft Copilot
 ## Design Summary
+
 ## Experment Summary
-## Build & Run
-```bash
-cargo build --release
-cargo run
-```
+
 ### Requirements
 - Rust toolchain installed (Cargo + rustc)
 - Dependency: `rand = "0.8"` in `Cargo.toml`
-
-### Build (debug)
+## Build & Run
 ```bash
-cargo build
+cargo build --release
+cargo run --release
 ```
