@@ -1,14 +1,13 @@
-# Task Dispatcher (Central Dispatcher) — FIFO vs Optimized Scheduling
+# Task Dispatcher (Central Dispatcher) — FIFO vs Optimized
 
-This project implements a queue-based task scheduling system in Rust using a **central dispatcher** (manager queue) and a **bounded worker pool**.  It compares two scheduling policies (FIFO vs Optimized) across two workloads (Balanced vs Stressed), with **total runtime** as the primary metric.
+This project implements a queue-based task scheduling system in Rust using a **central dispatcher (manager queue)** and a **bounded worker pool (8 workers)**.  
+A **global CPU cap of 100%** is enforced via a CPU “reservation” model. The primary optimization goal is **total runtime**. All other metrics are supplementary and included to help explain behavior.
 
 ---
 
-## Build & Run
-
-### Requirements
-- Dependency: `rand = "0.8"` in `Cargo.toml`
-
+## Build and Run
+cargo build --release
+cargo run --release
 ### Build (debug)
 ```bash
 cargo build
