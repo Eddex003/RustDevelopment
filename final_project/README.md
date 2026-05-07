@@ -10,10 +10,14 @@ This reduced shared mutable state and avoided needing locks around the queues.
 ## One piece of advice rejected
 Using additional external concurrency frameworks or advanced scheduling structures early on.
 ## Tool Use Disclosure
-
+Microsoft Copilot
+## Design Summary
+## Experment Summary
 ## Build & Run
-cargo build
+```bash
+cargo build --release
 cargo run
+```
 ### Requirements
 - Rust toolchain installed (Cargo + rustc)
 - Dependency: `rand = "0.8"` in `Cargo.toml`
@@ -21,3 +25,4 @@ cargo run
 ### Build (debug)
 ```bash
 cargo build
+```
