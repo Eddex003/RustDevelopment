@@ -15,7 +15,7 @@ Microsoft Copilot
 
 ## Experment Summary
 
-### Requirements
+## Requirements
 - Rust toolchain installed (Cargo + rustc)
 - Dependency: `rand = "0.8"` in `Cargo.toml`
 ## Build & Run
