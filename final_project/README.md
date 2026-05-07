@@ -6,8 +6,7 @@ A **global CPU cap of 100%** is enforced via a CPU “reservation” model. The 
 ---
 
 ## Build and Run
-cargo build --release
-cargo run --release
 ### Build (debug)
 ```bash
-cargo build
+cargo build --release
+cargo run --release
